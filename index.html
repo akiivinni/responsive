@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5a4c455443.js" crossorigin="anonymous"></script>
+  
+
+    <title>navbar</title>
+    <style>
+        *
+        {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-size: 20px;
+        }
+        label,#toggle
+        {
+            display: none;
+        }
+        .nav
+        {
+            display:flex;
+            background-color: black;
+            color:white;
+            padding:20px;
+            flex-wrap: wrap;
+          
+            justify-content: space-between;
+        }
+        .list
+        {
+            list-style-type: none;
+            display: flex;
+           gap:10px;
+           
+        }
+        a
+        {
+            text-decoration: none;
+            font-size: 20px;
+        }
+        @media(max-width:700px) {
+            .list
+            {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                padding:20px;
+            }
+            label
+            {
+                display:block;
+            }
+          #toggle:checked~.list
+            {
+                display: flex;
+              
+            }
+           
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "nav">
+        <a href = "#">Logo</a>
+        <input type = "checkbox" id = "toggle">
+        <label for  = "toggle"><i class="fa-solid fa-bars"></i></label>
+        <ul class = "list">
+            <a href = "#">Home</a>
+            <a href = "#">About</a>
+            <a href = "#">Products</a>
+            <a href = "#">Contact us</a>
+
+        </ul>
+    </div>
+    
+</body>
+</html>
